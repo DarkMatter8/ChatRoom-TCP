@@ -11,7 +11,7 @@ from thread import *
 
 def callback(): # this function will run on button press
     s.config(text="Server Started!")
-    root.after(1000, start_server)
+    start_new_thread(start_server,())
 
 root = tk.Tk()
 start = tk.Button(root, text="Start Server", command=callback)
